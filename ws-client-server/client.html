@@ -1,0 +1,17 @@
+<h1>
+    Italian coders web socket example
+  </h1>
+  <p>
+      open console to see connection.
+  </p>
+  <script>
+      var ws = new WebSocket('ws://localhost:3009');
+      ws.onopen = function () {
+          console.log('websocket connection established...')
+          ws.send('hi server')
+      }
+      ws.onmessage = function (message) {
+          console.log('message received :',message);
+      }
+  </script>
+  
