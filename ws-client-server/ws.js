@@ -5,9 +5,9 @@ wss.on('connection', function (ws) {
         console.log('received: %s', message)
     })
     setInterval(() => {
-        console.log('elaboratin message');
+        console.log('elaborating message');
         //logiche di creazione del messagio
-        const message =  { text: 'Ciao', sentAt: new Date() };
+        const message =  { text: 'Hello, this is server message!', sentAt: new Date() };
         ws.send(JSON.stringify(message));
     }, 3000);
 })

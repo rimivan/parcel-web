@@ -11,7 +11,15 @@
           ws.send('hi server')
       }
       ws.onmessage = function (message) {
-          console.log('message received :',message);
+        console.log('message received :',message);
+        var text = JSON.parse(message.data);
+          
+        const body = document.querySelector('body');
+        const hElement = document.createElement('div');
+        const textNode = document.createTextNode(text.text);
+        hElement.appendChild(textNode);
+        body.appendChild(hElement);
+          
       }
   </script>
   
