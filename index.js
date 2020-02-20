@@ -1,3 +1,4 @@
+require('js-logger').useDefaults();
 import { hElementInDocument } from "./src/scripts/script-1";
 import * as textData from "./src/scripts/script-2";
 

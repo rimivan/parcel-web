@@ -1,3 +1,4 @@
+require('js-logger').useDefaults();
 import * as React from 'react';
 import ReactDOM from 'react-dom';
 import { Clock } from './src/react-components/Clock';
